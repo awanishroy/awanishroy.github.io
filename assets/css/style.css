@@ -17,10 +17,29 @@ body {
   background: transparent;
 }
 
+.loader {
+  border: 10px solid #000000;
+  border-top: 10px solid #0f1011;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/awanishrai.png") top right no-repeat;
+  background: #040404 url("../img/background.jpg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
